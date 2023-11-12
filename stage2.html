@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stage2</title>
+    <style>
+        .container {
+            background-image: url(hall.png) ;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .device {
+            position: absolute;
+            top: 39%;
+            left: 46%;
+            width: 90px;
+            height: 44px;
+        }
+        .quiz {
+            color: black;
+        }
+        .img {
+            width: 400px;
+            height: 300px;
+        }
+        #q1, #q2, #q3, #q4, #q5, #q6 {
+            display: block;
+        }
+        .backstraight {
+            position: absolute;
+            top: 46%;
+            left: 47%;
+            width: 64px;
+            height: 80px;
+            cursor: pointer;
+        }
+        .backleft {
+            position: absolute;
+            top: 49%;
+            left: 33%;
+            width: 72px;
+            height: 88px;
+            cursor: pointer;
+        }
+        .backright {
+            position: absolute;
+            top: 49%;
+            left: 60%;
+            width: 72px;
+            height: 88px;
+            cursor: pointer;
+        }
+        .frontleft {
+            position: absolute;
+            top: 52%;
+            left: 28%;
+            width: 100px;
+            height: 120px;
+            cursor: pointer;
+        }
+        .frontright {
+            position: absolute;
+            top: 52%;
+            left: 64%;
+            width: 100px;
+            height: 120px;
+            cursor: pointer;
+        }
+        .straight {
+            position: absolute;
+            top: 59%;
+            left: 44%;
+            width: 124px;
+            height: 152px;
+            cursor: pointer;
+        }
+        #hidden {
+            position: absolute;
+            top: 62%;
+            left: 40.7%;
+            width: 26.2vh;
+            height: 7vh;
+            display: none;
+        }
+        footer {
+            position: absolute;
+            margin: auto;
+            padding: 20px 60px;
+            bottom: 0;
+        }
+    </style>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="story.css">
+</head>
+<body class="fade">
+    <p class="stage">STAGE2</p>
+    <iframe src="timer.html"></iframe>
+    <div class="bg_onetime_popup">
+        <div class="onetime_popup">
+            <div class="onetime_popup_title">
+                <span class="onetime_popup_title_close"></span>
+                <span>ストーリー2</span>
+            </div>
+            <div class="onetime_popup_content">
+                <p class="TextTyping">
+                    「おお......なんだ、ここ？」
+                    開いた扉の先には、謎の銅像？が置いてある部屋があった。
+                    だが、次の部屋につながりそうな扉が見当たらない。ということは、この部屋にお宝があるのか！？
+                    すると突然、部屋の銅像がしゃべりだした！
+                    『我々の出す問題にすべて答えられたら、お宝がある部屋への道を開いてやろう』
+                    なるほど、ここにある6体の銅像の問題を解けば良いんだな。
+                    ミッション：全ての銅像の謎を解いて隠し通路を見つけよう。
+                </p>
+                    <!-- 本編では使うが今回は省略 -->
+                    <!-- 奥の祭壇には謎の装置もある。 -->
+                    <!-- さっき拾ったこの石版で答えることができそうだ！よし、がんばるぞ！ -->
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- 研究時には使わない -->
+        <!-- <div>
+            <img class="device" src="合成分解.png" alt="">
+        </div> -->
+        <div class="wrapper">
+            <a href="#" class="modal-toggle btn-example" data-modal="modal1">
+                <img id="q1" class="backstraight" src="beasts/fox.png" alt="">
+            </a>
+            <a href="#" class="modal-toggle btn-example" data-modal="modal2">
+                <img id="q2" class="backleft" src="beasts/tiger.png" alt="">
+            </a>
+            <a href="#" class="modal-toggle btn-example" data-modal="modal3">
+                <img id="q3" class="backright" src="beasts/wolf.png" alt="">
+            </a>
+            <a href="#" class="modal-toggle btn-example" data-modal="modal4">
+                <img id="q4" class="frontleft" src="beasts/dragon.png" alt="">
+            </a>
+            <a href="#" class="modal-toggle btn-example" data-modal="modal5">
+                <img id="q5" class="frontright" src="beasts/horse.png" alt="">
+            </a>
+            <a href="#" class="modal-toggle btn-example" data-modal="modal6">
+                <img id="q6" class="straight" src="beasts/firebird.png" alt="">
+            </a>
+        </div>
+
+        <!-- modal1 fox -->
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+            <div class="modal-top">
+                <span class="modal-close">×</span>
+                </div>
+            <div class="modal-container">
+                <p class="quiz">狐の問題「私は美しきものを愛している。この問題の答えのように。」</p>
+                <img class="img" src="stage2q/花 - 狐.png" alt="">
+                <form id="quiz-1">
+                    <input name="answer" type="radio" value="a"><img class="choice" src="blocks/金.png" alt=""></input>
+                    <input name="answer" type="radio" value="b"><img class="choice" src="blocks/苺.png" alt=""></input>
+                    <input name="answer" type="radio" value="c"><img class="choice" src="blocks/月.png" alt=""></input>
+                    <input name="answer" type="radio" value="d"><img class="choice" src="blocks/花.png" alt=""></input>
+                </form>
+                <button class="ans-btn" type="button" onclick="answerQuiz1();allCorrect()">解答する</button>
+            </div>
+            </div>
+        </div>
+        <!-- modal1 -->
+
+        <!-- modal2 tiger -->
+        <div id="modal2" class="modal">
+            <div class="modal-content">
+            <div class="modal-top">
+                <span class="modal-close">×</span>
+                </div>
+            <div class="modal-container">
+                <p class="quiz">虎の問題「我こそは大地の狩人なり。本日の獲物はこの問題の答えにするとしよう。」</p>
+                <img class="img" src="stage2q/牛 - 虎.png" alt="">
+                <form id="quiz-2">
+                    <input name="answer" type="radio" value="a"><img class="choice" src="blocks/熊.png" alt=""></input>
+                    <input name="answer" type="radio" value="b"><img class="choice" src="blocks/貝.png" alt=""></input>
+                    <input name="answer" type="radio" value="c"><img class="choice" src="blocks/牛.png" alt=""></input>
+                    <input name="answer" type="radio" value="d"><img class="choice" src="blocks/蟹.png" alt=""></input>
+                </form>
+                <button class="ans-btn" type="button" onclick="answerQuiz2();allCorrect()">解答する</button>
+            </div>
+            </div>
+        </div>
+        <!-- modal2 -->
+
+        <!-- modal3 wolf -->
+        <div id="modal3" class="modal">
+            <div class="modal-content">
+            <div class="modal-top">
+                <span class="modal-close">×</span>
+                </div>
+            <div class="modal-container">
+                <p class="quiz">狼の問題「神よ、拙者にこの問題の答えを与えたまえ！もっと強き力を！」</p>
+                <img class="img" src="stage2q/角 - 狼.png" alt="">
+                <form id="quiz-3">
+                    <input name="answer" type="radio" value="a"><img class="choice" src="blocks/目.png" alt=""></input>
+                    <input name="answer" type="radio" value="b"><img class="choice" src="blocks/角.png" alt=""></input>
+                    <input name="answer" type="radio" value="c"><img class="choice" src="blocks/火.png" alt=""></input>
+                    <input name="answer" type="radio" value="d"><img class="choice" src="blocks/竹.png" alt=""></input>
+                </form>
+                <button class="ans-btn" type="button" onclick="answerQuiz3();allCorrect()">解答する</button>
+            </div>
+            </div>
+        </div>
+        <!-- modal3 -->
+
+        <!-- modal4 dragon -->
+        <div id="modal4" class="modal">
+            <div class="modal-content">
+            <div class="modal-top">
+                <span class="modal-close">×</span>
+                </div>
+            <div class="modal-container">
+                <p class="quiz">龍の問題「しなやかに強く。この問題の答えは私の姿に似ている。」</p>
+                <img class="img" src="stage2q/刀 - 龍.png" alt="">
+                <form id="quiz-4">
+                    <input name="answer" type="radio" value="a"><img class="choice" src="blocks/雷.png" alt=""></input>
+                    <input name="answer" type="radio" value="b"><img class="choice" src="blocks/刀.png" alt=""></input>
+                    <input name="answer" type="radio" value="c"><img class="choice" src="blocks/角.png" alt=""></input>
+                    <input name="answer" type="radio" value="d"><img class="choice" src="blocks/木.png" alt=""></input>
+                </form>
+                <button class="ans-btn" type="button" onclick="answerQuiz4();allCorrect()">解答する</button>
+            </div>
+            </div>
+        </div>
+        <!-- modal4 -->
+
+        <!-- modal5 horse -->
+        <div id="modal5" class="modal">
+            <div class="modal-content">
+            <div class="modal-top">
+                <span class="modal-close">×</span>
+                </div>
+            <div class="modal-container">
+                <p class="quiz">馬の問題「自分を信じなさい。この問題の答えはもう見えているのだから。」</p>
+                <img class="img" src="stage2q/虫 - 馬.png" alt="">
+                <form id="quiz-5">
+                    <input name="answer" type="radio" value="a"><img class="choice" src="blocks/本.png" alt=""></input>
+                    <input name="answer" type="radio" value="b"><img class="choice" src="blocks/雨.png" alt=""></input>
+                    <input name="answer" type="radio" value="c"><img class="choice" src="blocks/花火.png" alt=""></input>
+                    <input name="answer" type="radio" value="d"><img class="choice" src="blocks/虫.png" alt=""></input>
+                </form>
+                <button class="ans-btn" type="button" onclick="answerQuiz5();allCorrect()">解答する</button>
+            </div>
+            </div>
+        </div>
+        <!-- modal5 -->
+
+        <!-- modal6 firebird -->
+        <div id="modal6" class="modal">
+            <div class="modal-content">
+            <div class="modal-top">
+                <span class="modal-close">×</span>
+                </div>
+            <div class="modal-container">
+                <p class="quiz">鳳凰の問題「我は全ての神獣を統べる王なり。他の神獣を全て倒してから来い。」</p>
+                <img class="img" src="stage2q/蟹 - 鳥.png" alt="">
+                <form id="quiz-6">
+                    <input name="answer" type="radio" value="a"><img class="choice" src="blocks/蟹.png" alt=""></input>
+                    <input name="answer" type="radio" value="b"><img class="choice" src="blocks/銀杏.png" alt=""></input>
+                    <input name="answer" type="radio" value="c"><img class="choice" src="blocks/唄.png" alt=""></input>
+                    <input name="answer" type="radio" value="d"><img class="choice" src="blocks/蛙.png" alt=""></input>
+                </form>
+                <button class="ans-btn" type="button" onclick="answerQuiz6();allCorrect()">解答する</button>
+            </div>
+            </div>
+        </div>
+        <!-- modal6 -->
+
+        <div>
+            <a href="stage3.html"><img id="hidden" src="hidden_route.png" alt=""></a>
+        </div>
+    </div>
+    <footer>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+    <script src="story.js"></script>
+</body>
+</html>

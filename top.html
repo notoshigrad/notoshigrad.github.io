@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DungeonEntrance</title>
+    <style>
+        .frame {
+            background-image: url(bg_cave.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        header {
+            position: relative;
+            display: block;
+            margin: auto;
+            padding: 100px 60px;
+            width: auto;
+            height: auto;
+            text-align: center;
+            opacity: 0.8;
+        }
+        .scroll{
+            font-size: 48px;
+            color: beige;
+        }
+        img {
+            width: 100%;
+            height: auto;
+        }
+        .main {
+            position: relative;
+            margin: auto;
+            padding: 40px 120px;
+            width: auto;
+            height: 960px;
+            opacity: 0.8s;
+            color: beige;
+            font-size: 24px;
+        }
+        .rules {
+            text-align: start;
+        }
+        .start {
+            margin: 100px;
+        }
+        footer {
+            position: relative;
+            margin: auto;
+            padding: 20px;
+            background-color: bisque;
+        }
+        footer p {
+            color: black;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="fade">
+    <div class="frame">
+        <header>
+            <p>卒業研究用ゲーム</p>
+            <img src="title.png" alt="">
+            <p class="scroll">⇩</p>
+        </header>
+        <div class="main">
+            <h3>ストーリー</h3>
+            <p>
+                「あった!!ついにたどり着いた...!!」<br>
+                金銀財宝が眠るとされる古代遺跡へやって来たあなたたち。<br>
+                しかし、行く手を阻むのは様々な謎。<br>
+                <!-- さらに、遺跡がなんと崩壊を始め...
+                「まずい、このままでは......」
+                あなたたちは、この遺跡に眠る金銀財宝を見つけ出し、無事に脱出できるか ---。 -->
+                あなたたちは、この遺跡に眠る金銀財宝を見つけ出すことができるのか ---。
+            </p>
+                <br>
+            <h3>ルール</h3>
+            <p>
+                <ul class="rules">
+                    <li>3人で協力してゲームクリアを目指して挑戦していただきます。</li>
+                    <li>クリアすることが目的ではありません。純粋に楽しんでいただければと思います。</li>
+                    <li>ゲーム中の様子は録画させていただきますが、気負わず自然体でいてくれると助かります。ただし、積極的にコミュニケーションをとるようお願いします。</li>
+                    <li>ゲームの制限時間は20分です。ゲームスタートと同時に録画を開始いたします。</li>
+                    <li>なお、データの一貫性の観点から、制限時間内にゲームを終了しても、20分間は録画を続行いたしますので会話を止めないようご協力お願いします。</li>
+                    <li>コミュニケーション量を測るのが本実験の目的です。選択肢を全パターン試すなど、よく話し合わず闇雲なプレイをするのはお控えください。</li>
+                    <li>事後アンケートには必ず回答してください。</li>
+                </ul>
+            </p>
+            <div class="start">
+                <button onclick="location.href='stage1.html'">スタート</button>
+            </div>
+        </div>
+        <footer>
+            <p>&copy; Masashi Notoya. 2023.</p> 
+        </footer>    
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
