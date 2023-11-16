@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stage1</title>
+    <style>
+        .container {
+            background-image: url(path.jpeg) ;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #images {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            width: 70vh;
+            height: 50vh;
+            justify-content: center;
+            text-align: center;
+            border: 3px solid rgba(85, 66, 39, 0.534);
+        }
+        #images img {
+            width: 100%;
+            height: 100%;
+        }
+        #q1 {
+            display: block;
+        }
+        #images video {
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            display: none;
+        }
+        #q3 {
+            display: none;
+        }
+
+        a #door {
+            margin: auto;
+            position: absolute;
+            top: 21vh;
+            right: 0;
+            left: 0;
+            width: 19%;
+            height: 23%;
+            display: none;
+        }
+        .ans_box {
+            position: absolute;
+            margin: auto;
+            bottom: 7%;
+            left: 45%;
+        }
+
+        footer {
+            position: absolute;
+            margin: auto;
+            padding: 20px 60px;
+            bottom: 0;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="story.css">
+</head>
+<body class="fade">
+    <p class="stage">STAGE1</p>
+    <iframe src="timer.html"></iframe>
+    <div class="bg_onetime_popup">
+        <div class="onetime_popup">
+            <div class="onetime_popup_title">
+                <span class="onetime_popup_title_close"></span>
+                <span>ストーリー1</span>
+            </div>
+            <div class="onetime_popup_content">
+                <p class="TextTyping">
+                    ........洞窟に入った。
+                    目当ての金銀財宝はこの洞窟の最深部にあるらしい。
+                    複雑に入り組んだ道を進んでいくと、突如目の前に謎の扉があらわれた。
+                    どうやらこの先に進むためには、扉の謎を解かなければならないようだ。
+                    ミッション：扉の謎を解いて先に進もう。
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div id="images">
+            <img id="q1" src="stage1a.png" alt="">
+            <video id="q2" controls src="stage1b.mp4"></video>
+            <img id="q3" src="stage1c.png" alt="">
+            <a href="stage2.html"><img id="door" src="door.jpg" alt=""></a>
+        </div>
+    </div>
+    <div class="ans_box">
+        <form name="judge">
+            <input type="text" name="keyword" placeholder="回答を入力">
+            <input type="button" value="送信" onclick="check()"></input>
+        </form>
+    </div>
+    <footer>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+    <script src="story.js"></script>
+</body>
+</html>

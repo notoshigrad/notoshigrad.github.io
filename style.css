@@ -1,0 +1,142 @@
+body {
+    text-align: center;
+    background-color: black;
+}
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:#fff;
+    z-index: 9999;
+    pointer-events: none;  /* 他の要素にアクセス可能にするためにポインターイベントは無効に */
+    opacity: 0;
+    -webkit-transition: opacity 2s linear;  /* アニメーション2秒 */
+    transition: opacity 2s linear;
+}
+body.fade::after {
+    opacity: 1;
+}
+p {
+    color: beige;
+}
+.stage {
+    font-size: 24px;
+}
+.container {
+    position: relative;
+    margin: auto;
+    width: 140vh;
+    height: 75vh;
+    justify-content: center;
+    text-align: center;
+}
+button {
+    margin: 10px;
+    padding: 10px;
+    width: 500px;
+    border: 2px solid beige;
+    border-radius: 1%;
+    color: beige;
+    background-color: brown;
+    text-align: center;
+    font-size: 36px;
+}
+button:hover {
+    cursor: pointer;
+}
+footer {
+    justify-content: center;
+    text-align: center;
+}
+iframe {
+    position: absolute;
+    top: -65px;
+    right: 45px;
+    margin: 0;
+    padding: 0;
+    border: none;
+    width: 80;
+    height: 50;
+}
+
+body {
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 0;
+    color: #000;
+}
+.choice {
+    margin: 10px;
+    margin-right: 30px;
+    width: 80px;
+    height: 80px;
+}
+.ans-btn {
+    border: 2px solid beige;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 8887;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: all 1s ease-in-out;
+}
+.modal-container .img {
+    background: #f1f1f1;
+    margin-bottom: 15px;
+}
+.modal-container p {
+    margin-bottom: 10px;
+}
+.modal-container p:last-child {
+    margin-bottom: 0;
+}
+.modal-content {
+    background: beige;
+    overflow-y: auto;
+    padding: 20px 25px;
+    width: 90%;
+    max-width: 800px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-height: 600px;
+    animation: show 0.6s linear 0s;
+    filter: drop-shadow(0px 2px 6px #777);
+}
+.modal-top {
+    display: inline-block;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+.modal-close {
+    color: #000000;
+    text-decoration: none;
+    font-size: 2rem;
+    line-height: 1;
+    padding: 0 8px;
+}
+.modal-close:hover, .modal-close:focus {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@keyframes show{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}

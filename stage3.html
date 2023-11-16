@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stage3</title>
+    <style>
+        .container {
+            background-image: url(hidden_room.jpeg) ;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position-y: -100px;
+        }
+        .img {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            width: 70vh;
+            height: 50vh;
+            justify-content: center;
+            text-align: center;
+        }
+        .generate {
+            position: absolute;
+            width: 30vh;
+            height: 30vh;
+            top: 60%;
+            left: 38%;
+        }
+        footer {
+            position: absolute;
+            margin: auto;
+            padding: 20px 60px;
+            bottom: 0;
+        }
+    </style>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="story.css">
+</head>
+<body class="fade">
+    <p class="stage">最奥の宝物庫</p>
+    <!-- <iframe src="timer.html"></iframe> -->
+    <div class="bg_onetime_popup">
+        <div class="onetime_popup">
+            <div class="onetime_popup_title">
+                <span class="onetime_popup_title_close"></span>
+                <span>ラストストーリー</span>
+            </div>
+            <div class="onetime_popup_content">
+                <p class="TextTyping">
+                    部屋の真ん中から隠し通路があらわれた！
+                    さっそく降りてみると、薄暗い部屋にたどり着いた。
+                    部屋には謎の箱がある...
+                    これは....まさか....！宝箱？
+                    ミッション：箱を開けよう。
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div>
+            <!-- 研究では具現化のくだり全カット -->
+            <img class="generate" src="具現化.png" alt="">
+            <a href="clear.html"><img class="generate" src="具現化.png" alt=""></a>
+        </div>
+    </div>
+    <footer>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+    <script src="story.js"></script>
+</body>
+</html>
